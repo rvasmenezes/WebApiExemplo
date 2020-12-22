@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ExceptionHandler\**" />
+    <EmbeddedResource Remove="ExceptionHandler\**" />
+    <None Remove="ExceptionHandler\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lider.DPVAT.APIModelo.Application\Lider.DPVAT.ExampleAPIProject.Application.csproj" />
+    <ProjectReference Include="..\Lider.DPVAT.APIModelo.Domain\Lider.DPVAT.ExampleAPIProject.Domain.csproj" />
+    <ProjectReference Include="..\Lider.DPVAT.APIModelo.Infra.Data\Lider.DPVAT.ExampleAPIProject.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
